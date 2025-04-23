@@ -1,0 +1,12 @@
+services:
+  pg:
+    image: 'bitnami/postgresql:latest'
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: tc96_starter
+    ports:
+      - 5432:5432
+    volumes:
+      - './docker:/docker-entrypoint-initdb.d'
