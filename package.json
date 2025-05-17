@@ -1,5 +1,5 @@
 {
-	"name": "tc96-api-starter",
+	"name": "rktseat-upload-api",
 	"version": "0.0.0",
 	"description": "",
 	"module": "module",
@@ -12,12 +12,23 @@
 		"lint:fix": "biome check . --write",
 		"lint:staged": "biome check . --staged --write",
 		"lint:ci": "biome ci",
-		"prepare": "husky"
+		"prepare": "husky",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "drizzle-kit migrate",
+		"db:studio": "drizzle-kit studio"
 	},
 	"dependencies": {
+		"@aws-sdk/client-s3": "3.802.0",
+		"@aws-sdk/lib-storage": "3.802.0",
 		"@fastify/cors": "11.0.1",
+		"@fastify/multipart": "9.0.3",
+		"@fastify/swagger": "9.5.0",
+		"@fastify/swagger-ui": "5.2.2",
+		"drizzle-orm": "0.42.0",
 		"fastify": "5.2.2",
 		"fastify-type-provider-zod": "4.0.2",
+		"postgres": "3.4.5",
+		"uuidv7": "^1.0.2",
 		"zod": "3.24.2"
 	},
 	"devDependencies": {
@@ -26,10 +37,12 @@
 		"@commitlint/config-conventional": "19.8.0",
 		"@tc96/biome-config": "1.1.1",
 		"@types/node": "22.14.0",
+		"drizzle-kit": "0.31.0",
 		"husky": "9.1.7",
 		"tsup": "8.4.0",
 		"tsx": "4.19.3",
-		"typescript": "5.8.3"
+		"typescript": "5.8.3",
+		"vitest": "3.1.3"
 	},
 	"packageManager": "pnpm@10.7.1",
 	"keywords": [],

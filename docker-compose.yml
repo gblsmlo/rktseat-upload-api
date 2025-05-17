@@ -5,7 +5,7 @@ services:
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
-      POSTGRES_DB: tc96_starter
+      POSTGRES_DB: upload_api
     ports:
       - 5432:5432
     volumes:
