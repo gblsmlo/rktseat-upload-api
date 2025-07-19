@@ -25,8 +25,6 @@ server.setErrorHandler((error, request, reply) => {
 		})
 	}
 
-	console.error(error)
-
 	return reply.status(500).send({ message: 'Internal server error' })
 })
 
